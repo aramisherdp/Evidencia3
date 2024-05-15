@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "evidencia-xerarch",
     "public": "dist/xerarch",
     "ignore": [
       "firebase.json",
