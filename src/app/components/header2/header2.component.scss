@@ -1,0 +1,297 @@
+.m-section {
+  // background-image: url("../../../assets/images/gallery/background-image-header.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
+h1 {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.main-content {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-flex {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.branding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-right: 20px;
+  flex: 1;
+  animation: slideFromLeft 1.3s ease-out forwards;
+
+  h1 {
+    color: #07689F;
+    font-family: Poppins-Medium;
+    padding-bottom: 50px;
+    font-size: 30px;
+  }
+
+}
+
+.logo {
+  align-items: center;
+}
+
+.logo img {
+  width: 185px;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+  padding-top: 28.125%;
+  animation: slideFromRight 1.3s ease-out forwards;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.time-bar {
+  display: flex;
+  margin-top: 50px;
+  background-size: auto;
+  max-width: 1250px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  font-size: 18px;
+  justify-content: space-around;
+  animation: slideUp 1.3s ease-out forwards;
+
+}
+
+.date {
+  background: #ffffff;
+  padding: 5px 20px;
+  border-radius: 15px;
+  color: #BF0AA3;
+  font-weight: 600;
+  max-width: 180px;
+}
+
+.time-bar div {
+  flex: 1;
+  text-align: center;
+}
+
+.counter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  div {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    order: -1;
+  }
+
+  label {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+}
+
+audio {
+  padding-bottom: 10px;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(70%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.branding-container, .video-container, .time-bar {
+  opacity: 0;
+}
+
+.bar {
+  background-color: #07689F;
+  min-height: 9vh;
+  color: #ffffff;
+  text-transform: uppercase;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  line-height: 12px;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 21px;
+  margin-top: 170px;
+  width: 100%;
+
+  h1 {
+    font-family: Poppins-Medium;
+    font-size: 35px;
+    margin: 0;
+  }
+  .div {
+    justify-content: center;
+  }
+
+  .bar-text {
+    font-size: 11px;
+  }
+
+  button {
+    background-color: #1ac2ff;
+    padding: 8px 25px;
+    border-radius: 15px;
+    color: #BF0AA3;
+    font-weight: 600;
+    max-width: 180px;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.5s ease;
+  }
+
+  button:hover {
+    background-color: #7600FF;
+  }
+}
+
+@media (max-width: 850px) {
+  .content-flex {
+    flex-direction: column;
+  }
+
+  .branding-container,
+  .video-container {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    margin-bottom: 45px;
+  }
+
+  .logo img {
+    width: 140px;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .video-container {
+    padding-top: 56.25%;
+  }
+
+  .video-container iframe {
+    height: 100%;
+  }
+
+  .time-bar {
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .time-bar div,
+  .counter div {
+    margin: 10px 0;
+  }
+
+  .date {
+    width: 90%;
+    max-width: none;
+    padding: 7.5px ;
+  }
+
+  .counter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    label {
+      font-size: 12px;
+    }
+  }
+
+  .bar {
+    flex-direction: column;
+    padding: 15px;
+    justify-content: center;
+
+    br {
+      display: none;
+    }
+
+  }
+}

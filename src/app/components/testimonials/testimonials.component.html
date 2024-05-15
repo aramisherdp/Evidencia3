@@ -1,0 +1,35 @@
+<section class="m-section">
+  <div class="main-container">
+    <div class="title">
+      <h2>Testimonials</h2>
+      <h1>what our clients <span style="color: var(--primary); font-family: 'Poppins-Bold';">have to say...</span></h1>
+    </div>
+    <div class="testimonials">
+      <div class="swiper">
+        <swiper [config]="swiperConfig" [navigation]="true" [centeredSlides]="true" [autoplay]="true"
+        [pagination]="{clickable: true, dynamicBullets: true}" [loop]="true" class="swiper-partners">
+        <ng-template swiperSlide *ngFor="let swiper of swiper">
+          <div class="border">
+
+            <div class="all">
+
+              <div class="info">
+                <p class="text" >{{swiper.text}}</p>
+                <div class="icon-container " style="margin: 0; color: #939FB4; ">
+                  <img src="{{swiper.img}}" style="width: 30px;margin-right: 10px;" alt="">
+                  <p class="text"><b style="color: black;">{{swiper.title}}</b>
+                  <br>{{swiper.text1}}
+                  </p>
+              </div>
+            </div>
+
+          </div>
+          </div>
+        </ng-template>
+
+      </swiper>
+      </div>
+    </div>
+  </div>
+</section>
+

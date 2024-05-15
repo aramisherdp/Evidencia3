@@ -1,0 +1,81 @@
+section{
+    width: 100%;
+    margin-top: 100px;
+}
+
+h1{
+    font-size: 70px;  //80px
+    font-family: 'Poppins-Bold';
+    color: #1A679C;
+    word-break: break-word;
+    text-wrap: pretty ;
+    line-height: 1;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Poppins-Bold';
+    color: #939FB4;
+}
+
+h3{
+    font-size: 32px;
+    font-family: 'Poppins-Medium';
+}
+
+h4{
+    font-size: 36px;
+    font-family: 'Poppins-Bold';
+    line-height: 1;
+}
+
+.container{
+    // margin: 50px;
+    padding: 90px;
+}
+
+.header{
+    text-align: center;
+}
+
+.benefits{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // background-color: grey;
+    padding-top: 40px;
+}
+
+.card{
+    // width: 400px;
+    // background-color: blue;
+    margin: 15px;
+}
+
+
+@media (max-width: 1200px) {
+
+    .container{
+        padding: 0;
+    }
+    .benefits{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+  .header h2{
+    font-size: 2em;
+    margin: 0;
+  }
+  .header h1{
+    font-size: 2.2em;
+    margin: 0;
+  }
+  .header h3{
+    font-size: 1.8em;
+  }
+  .title h4{
+    font-size: 1.5em;
+  }
+
+}

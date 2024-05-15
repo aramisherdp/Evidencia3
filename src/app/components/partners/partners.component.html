@@ -1,0 +1,51 @@
+<section class="m-section" id="Partnerships">
+    <div class="container">
+        <div class="partners-swiper">
+            <div class="title">
+                <h2>Xerarch Partners</h2>
+                <h1>Companies that <span style="color: var(--primary); font-family: 'Poppins-Bold';">trust</span> with our <span style="color: var(--primary); font-family: 'Poppins-Bold';">work !</span></h1>
+            </div>
+            <div class="our-partners">
+              <div class="image">
+                <a href="https://www.impulso.solutions/">
+                  <img src="../assets/images/partners/logo-impulso-solutions.jpg" alt="">
+                </a>
+              </div>
+              <div class="image">
+                <a href="https://hbn-chicago.com/">
+                  <img src="../assets/images/partners/logo-hispanic-bn.jpg" alt="">
+                </a>
+              </div>
+              <div class="image">
+                <a href="https://www.mwrfinancial.com/es/">
+                  <img src="../assets/images/partners/logo-MWR.png" alt="">
+                </a>
+              </div>
+              <div class="image">
+                <a href="https://www.worlddatasystems.com/">
+                  <img src="../assets/images/partners/logo-world-ds.jpg" alt="">
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper">
+                <swiper [config]="swiperConfig" [navigation]="false" [centeredSlides]="true" [autoplay]="true"
+                [pagination]="{clickable: true}" [loop]="true" class="swiper-partners">
+
+                    <ng-template swiperSlide *ngFor="let swiper of swiper">
+                        <div class="border">
+                            <div class="all">
+                                <div class="partners">
+                                    <a [href]="swiper.url">
+                                      <img [src]="swiper.img" style="width: 100%; margin-right: 10px;" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+
+                </swiper>
+            </div>
+        </div>
+    </div>
+</section>

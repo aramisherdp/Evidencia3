@@ -1,0 +1,152 @@
+.title {
+  text-align: center;
+  font-family: Poppins-Bold;
+  color: #939FB4;
+  font-size: 40px;
+  padding-top: 300px; //placeholder
+  padding-bottom: 50px;
+}
+
+.loans-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+  // padding-bottom: 50px; //placeholder
+}
+
+.loan-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 20px 40px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.loan-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  align-self: center;
+  line-height: 1.1;
+}
+
+
+
+.loan-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+
+.loan-content img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.loan-description {
+  font-size: 1.8em;
+  line-height: 1.5;
+  height: 100px;
+  padding-top: 15px;
+}
+
+.residential-loan {
+  padding-top: 35px;
+}
+
+.highlighted {
+  color:#1A679C;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 12px;
+  font-size: 1.3em;
+  color: #fff;
+  background-color: #1A679C;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 1260px){
+  .commercial-btn{
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 1080px){
+  .commercial-btn{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    padding-top: 250px; //placeholder
+  }
+  .loans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .loan-section {
+    margin: 20px 20px;
+  }
+
+  .loan-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .loan-info {
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .loan-btn {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+  .loan-content img {
+    margin-bottom: 10px;
+  }
+
+  .loan-description {
+    height: 60px;
+    padding-top: 0;
+  }
+  .commercial-btn {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    padding-top: 150px;
+    padding-bottom: 20px;
+    font-size: 2em;
+  }
+  .loan-title {
+    font-size: 1.7em;
+  }
+  .loan-description {
+    font-size: 1.3em;
+  }
+  .loan-content img{
+    margin-bottom: 0;
+  }
+  button {
+    font-size: 1em;
+  }
+  .commercial-btn {
+    margin-top: 20px;
+  }
+}

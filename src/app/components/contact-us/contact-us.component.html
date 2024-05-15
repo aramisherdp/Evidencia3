@@ -1,0 +1,77 @@
+<section class="m-section" id="contacto">
+    <div class="main-container">
+        <div class="info-container">
+            <h1>Ready to <span style="color: var(--primary);">Boost</span> Your Business?</h1>
+            <h4>Our team is here to provide expert advice and tailored solutions to your needs. Click the contact button and let us help you take your business to the next level!</h4>
+            <img src="../../../assets/images/stock/contact.jpg" alt="">
+        </div>
+        <div class="form-container">
+            <div class="form">
+                <h3>Contact <span style="color: var(--primary);">us</span></h3>
+
+                <form action="" [formGroup]="contactForm" (ngSubmit)="formValidation()">
+
+                    <div class="form-field" [ngClass]="{'margin-error': (contactForm.get('company')?.errors && contactForm.get('company')?.touched) || (invalid && contactForm.get('company')?.untouched)}">
+                        <label for="">Company name <span style="color: red;">*</span></label>
+                        <input type="text" required (click)="resetValidations()" formControlName="company">
+                        <!-- <p class="form-error" *ngIf="(contactForm.get('company')?.hasError('required') && contactForm.get('company')?.touched) || (invalid && contactForm.get('company')?.untouched)" style="color: red;">
+                          * Required
+                        </p> -->
+                        <p class="form-error" *ngIf="(contactForm.get('company')?.errors && contactForm.get('get')?.touched) || (invalid && contactForm.get('company')?.untouched)" style="color: red;">
+                          {{errorMessage('company')}}
+                        </p>
+                    </div>
+
+                    <div class="form-field" [ngClass]="{'margin-error': (contactForm.get('name')?.errors && contactForm.get('name')?.touched) || (invalid && contactForm.get('name')?.untouched)}">
+                        <label for="">Name <span style="color: red;">*</span></label>
+                        <input type="text" required (click)="resetValidations()" formControlName="name">
+                        <!-- <p class="form-error" *ngIf="(contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched) || (invalid && contactForm.get('name')?.untouched)" style="color: red;">
+                          * Required
+                        </p> -->
+                        <p class="form-error" *ngIf="(contactForm.get('name')?.errors && contactForm.get('get')?.touched) || (invalid && contactForm.get('name')?.untouched)" style="color: red;">
+                          {{errorMessage('name')}}
+                        </p>
+                    </div>
+
+                    <div class="form-field" [ngClass]="{'margin-error': (contactForm.get('position')?.errors && contactForm.get('position')?.touched) || (invalid && contactForm.get('position')?.untouched)}">
+                        <label for="">Company position <span style="color: red;">*</span></label>
+                        <input type="text" required (click)="resetValidations()" formControlName="position">
+                        <!-- <p class="form-error" *ngIf="(contactForm.get('position')?.hasError('required') && contactForm.get('position')?.touched) || (invalid && contactForm.get('position')?.untouched)" style="color: red;">
+                          * Required
+                        </p> -->
+                        <p class="form-error" *ngIf="(contactForm.get('position')?.errors && contactForm.get('get')?.touched) || (invalid && contactForm.get('position')?.untouched)" style="color: red;">
+                          {{errorMessage('position')}}
+                        </p>
+                    </div>
+
+                    <div class="form-field" [ngClass]="{'margin-error': (contactForm.get('email')?.errors && contactForm.get('email')?.touched) || (invalid && contactForm.get('email')?.untouched)}">
+                        <label for="">Email <span style="color: red;">*</span></label>
+                        <input type="text" required (click)="resetValidations()" formControlName="email">
+                        <!-- <p class="form-error" *ngIf="(contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched) || (invalid && contactForm.get('email')?.untouched)" style="color: red;">
+                          * Required
+                        </p> -->
+                        <p class="form-error" *ngIf="contactForm.get('email')?.hasError('pattern') && contactForm.get('email')?.touched" style="color: red;">
+                        {{errorMessage('email')}}
+                        </p>
+                    </div>
+
+                    <div class="form-field"  [ngClass]="{'margin-error': (contactForm.get('phone')?.errors && contactForm.get('phone')?.touched) || (invalid && contactForm.get('phone')?.untouched)}">
+                        <label for="">Phone number </label>
+                        <input type="number" minlength="10" maxlength="10" required (click)="resetValidations()" formControlName="phone" inputmode="numeric" oninput="(value=value.replace(/\D+/g, ''))" (input)="onPhoneInput($event)">
+                        <p class="form-error" *ngIf="(contactForm.get('phone')?.errors && contactForm.get('phone')?.touched) || (invalid && contactForm.get('phone')?.untouched)" style="color: red;">
+                          {{errorMessage('phone')}}
+                        </p>
+                    </div>
+
+                    <div class="btn-container">
+                        <button class="btn-primary" (click)="formValidation()">
+                            Send
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
